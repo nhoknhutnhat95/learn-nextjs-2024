@@ -2,16 +2,16 @@ import ButtonLogin from "@/components/button-login";
 import React from "react";
 import {readFileSync} from 'fs'
 import { redirect } from "next/navigation";
+import LoginForm from "./components/login-form";
 
-const LayoutPage = async () => {
-  const data = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const dataJSON = await data.json();
+const LoginPage = async () => {
+  
   return (
     <div>
-      Login nè: {dataJSON.length}
-      <ButtonLogin></ButtonLogin>
+      Login nè:
+      <LoginForm></LoginForm>
     </div>
   );
 };
 
-export default LayoutPage;
+export default LoginPage;

@@ -1,0 +1,116 @@
+.df-ui-btn.df-ui-next.ti-angle-right,
+.df-ui-btn.df-ui-prev.ti-angle-left {
+    width: 62px;
+    height: 62px;
+    background-color: rgba(21, 143, 255, .05);
+    color: #158FFF;
+    opacity: 1
+}
+
+.df-ui-btn.df-ui-next.ti-angle-right:hover,
+.df-ui-btn.df-ui-prev.ti-angle-left:hover {
+    color: #33B6FF;
+    background-color: rgba(226, 241, 255, 1);
+}
+
+.df-ui-wrapper.df-ui-controls {
+    width: 100%;
+    background-color: #fff;
+    height: 60px;
+    bottom: 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
+    border-radius: 0;
+    align-items: center
+}
+
+.df-3dcanvas {
+    pointer-events: none;
+}
+
+.df-ui-btn.df-ui-next.df-ui-alt.ti-angle-right {
+    width: 100%;
+    visibility: hidden
+}
+
+.df-ui-btn.df-ui-prev.df-ui-alt.ti-angle-left {
+    visibility: hidden;
+    height: 100%
+}
+
+.df-ui-btn.df-ui-page {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    min-width: 80px;
+    margin-left: 12px
+}
+
+.df-ui-btn.df-ui-page label {
+    color: #243648;
+    font-size: 16px;
+    padding-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 30px !important;
+    font-family: 'GoogleSans-Regular';
+}
+
+.df-ui-btn.df-ui-page input {
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    opacity: 1
+}
+
+.df-ui-btn.df-ui-fullscreen.ti-fullscreen:hover,
+.df-ui-btn.df-ui-zoomin.ti-zoom-in:hover,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out:hover {
+    background-color: rgba(21, 143, 255, 0.05);
+    color: #96ccff
+}
+
+.df-ui-btn.df-ui-zoomin.ti-zoom-in.disabled:hover,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out.disabled:hover {
+    background-color: rgba(21, 143, 255, 0.05);
+    color: #96ccff
+}
+
+.df-ui-btn.df-ui-zoomin.ti-zoom-in,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out {
+    border-radius: 5px;
+    background-color: rgba(21, 143, 255, 0.05);
+    color: #158FFF;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin-right: 20px
+}
+
+.df-ui-btn.df-ui-fullscreen.ti-fullscreen {
+    border-radius: 5px !important;
+    background-color: rgba(21, 143, 255, 0.05);
+    color: #158FFF;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin-right: 45px
+}
+
+.df-ui-btn.df-ui-zoomout.ti-zoom-out.disabled {
+    color: #96ccff
+}
+
+.df-ui-label-page {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #243648
+}
+
+.df-ui-btn.df-ui-thumbnail.ti-layout-grid2,
+.df-ui-btn.df-ui-share.ti-sharethis,
+.df-ui-btn.df-ui-more.ti-more-alt {
+    display: none;
+}
