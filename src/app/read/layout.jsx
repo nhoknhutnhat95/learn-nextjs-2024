@@ -8,9 +8,7 @@ export default function ReadLayout({ children }) {
         <div>
             <link rel='stylesheet' href='/libs/dflip/dflip.min.css'></link>
             <Script src='/libs/jquery/jquery-3.6.1.min.js' strategy="beforeInteractive"></Script>
-            <Script src='/libs/dflip/dflip.min.js' strategy="beforeInteractive" onLoad={()=>{
-                console.log('Load script')
-            }}></Script>
+            <Script src='/libs/dflip/dflip.min.js' strategy="beforeInteractive"></Script>
             {children}
         </div>
     );
