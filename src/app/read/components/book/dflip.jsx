@@ -1,5 +1,5 @@
 "use client";
-import Process from "@/components/book/process";
+import Process from "@/components/book/process/process";
 import Question from "@/components/book/question";
 import React, { useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ const Dflip = () => {
   // TODO Nhớ clear questionResult khi tắt modal question
   const [questionResult, setQuestionResult] = useState({});
   const [answerHistory, setAnswerHistory] = useState([]);
-  console.log(currentPage);
+  // console.log(currentPage);
   function initDflip() {
     var option_images = {
       webgl: true,
@@ -66,12 +66,12 @@ const Dflip = () => {
     <>
       <div id="flipBookImageContainer" className="flex-1 relative"></div>
       <Process onStarClick={onStarClick}></Process>
-      {true && (
+      {/* {true && (
         <Question
           onCheckQuestion={checkQuestion}
           questionResult={questionResult}
         ></Question>
-      )}
+      )} */}
     </>
   );
 };

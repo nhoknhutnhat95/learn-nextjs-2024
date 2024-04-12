@@ -2,6 +2,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useToast } from "@/components/ui/use-toast"
+
 
 const LoginForm = () => {
     const {
@@ -10,22 +12,26 @@ const LoginForm = () => {
         watch,
         formState: { errors },
     } = useForm();
+    const { toast } = useToast()
+
+
     const onSubmit = async (data) => {
         const result = await fetch(
-            `${process.env.NEXT_PUBLIC_API_ENDPOINT}/shop/login`,
+            `/api/login`,
             {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
                     "Content-Type": "application/json",
-                    "x-api-key":
-                        "672acce5c1d4545500c082cc7bc8d346f7eabda878bb82337eccd21b5bf68a801a99ff16cae34872cca021aa704ba38e1aedf7371ccad84b3fe7b5f57a1911aa",
                 },
             }
         ).then((res) => res.json());
         console.log(result);
-        localStorage.setItem('authorization', result.metadata.tokens.accessToken)
-        localStorage.setItem('x-client-id', result.metadata.shop._id)
+        toast({
+            description: "Đăng nhập thành công!",
+        })
+        localStorage.setItem('authorization', result.data.metadata.tokens.accessToken)
+        localStorage.setItem('x-client-id', result.data.metadata.shop._id)
     };
     const handleClick = async () => {
         const data = await fetch('/api/me', {

@@ -1,10 +1,13 @@
-export async function GET(req) {
-    console.log(req.headers);
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+export async function POST(req) {
+    console.log('api key', process.env.API_KEY);
+    const body = await req.json()
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/shop/login`, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'API-Key': process.env.DATA_API_KEY,
+            'x-api-key': process.env.API_KEY,
         },
+        body: JSON.stringify(body)
     })
     const data = await res.json()
 

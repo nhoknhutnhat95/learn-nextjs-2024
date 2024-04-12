@@ -75,6 +75,123 @@
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+}
 @layer utilities {
-  
+}
+.df-ui-btn.df-ui-next.ti-angle-right,
+.df-ui-btn.df-ui-prev.ti-angle-left {
+  width: 62px !important;
+  height: 62px !important;
+  background-color: rgba(21, 143, 255, 0.05) !important;
+  color: #158fff !important;
+  opacity: 1 !important;
+}
+
+.df-ui-btn.df-ui-next.ti-angle-right:hover,
+.df-ui-btn.df-ui-prev.ti-angle-left:hover {
+  color: #33b6ff !important;
+  background-color: rgba(226, 241, 255, 1) !important;
+}
+
+.df-ui-wrapper.df-ui-controls {
+  width: 100% !important;
+  background-color: #fff !important;
+  height: 60px !important;
+  bottom: 0 !important;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  border-radius: 0 !important;
+  align-items: center !important;
+}
+
+.df-3dcanvas {
+  pointer-events: none !important;
+}
+
+.df-ui-btn.df-ui-next.df-ui-alt.ti-angle-right {
+  width: 100% !important;
+  visibility: hidden !important;
+}
+
+.df-ui-btn.df-ui-prev.df-ui-alt.ti-angle-left {
+  visibility: hidden !important;
+  height: 100% !important;
+}
+
+.df-ui-btn.df-ui-page {
+  background-color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  min-width: 80px !important;
+  margin-left: 12px !important;
+}
+
+.df-ui-btn.df-ui-page label {
+  color: #243648 !important;
+  font-size: 16px !important;
+  padding-top: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  line-height: 30px !important;
+  font-family: "GoogleSans-Regular" !important;
+}
+
+.df-ui-btn.df-ui-page input {
+  height: 30px !important;
+  border-radius: 8px !important;
+  border: 1px solid #dbdbdb !important;
+  background: #fff !important;
+  opacity: 1 !important;
+}
+
+.df-ui-btn.df-ui-fullscreen.ti-fullscreen:hover,
+.df-ui-btn.df-ui-zoomin.ti-zoom-in:hover,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out:hover {
+  background-color: rgba(21, 143, 255, 0.05) !important;
+  color: #96ccff !important;
+}
+
+.df-ui-btn.df-ui-zoomin.ti-zoom-in.disabled:hover,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out.disabled:hover {
+  background-color: rgba(21, 143, 255, 0.05) !important;
+  color: #96ccff !important;
+}
+
+.df-ui-btn.df-ui-zoomin.ti-zoom-in,
+.df-ui-btn.df-ui-zoomout.ti-zoom-out {
+  border-radius: 5px !important;
+  background-color: rgba(21, 143, 255, 0.05) !important;
+  color: #158fff !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  margin-right: 20px !important;
+}
+
+.df-ui-btn.df-ui-fullscreen.ti-fullscreen {
+  border-radius: 5px !important;
+  background-color: rgba(21, 143, 255, 0.05) !important;
+  color: #158fff !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  margin-right: 45px !important;
+}
+
+.df-ui-btn.df-ui-zoomout.ti-zoom-out.disabled {
+  color: #96ccff !important;
+}
+
+.df-ui-label-page {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  color: #243648 !important;
+}
+
+.df-ui-btn.df-ui-thumbnail.ti-layout-grid2,
+.df-ui-btn.df-ui-share.ti-sharethis,
+.df-ui-btn.df-ui-more.ti-more-alt {
+  display: none !important;
 }
