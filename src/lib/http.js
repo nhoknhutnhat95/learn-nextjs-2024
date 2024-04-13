@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation"
+
 class HttpError extends Error {
     constructor({ status, payload }) {
         super('Http Error')
@@ -17,7 +19,7 @@ const request = async (method = 'GET', url = '/', options = {}) => {
     const baseHeaders = {
         'Content-Type': 'application/json'
     }
-    const baseUrl = options?.baseUrl === undefined ? process.env.NEXT_PUBLIC_BASE_URL : options.baseUrl
+    const baseUrl = options?.baseUrl ?? process.env.NEXT_PUBLIC_BASE_URL
     const fullUrl = url.startsWith('/') ? `${baseUrl}${url}` : `${baseUrl}/${url}`
     const res = await fetch(fullUrl, {
         ...options,
@@ -32,7 +34,7 @@ const request = async (method = 'GET', url = '/', options = {}) => {
     const response = await res.json()
     const data = {
         status: response.status,
-        payload: await response.data()
+        payload: response
     }
     if (!response.ok) {
         throw new HttpError(data)
@@ -45,13 +47,13 @@ const http = {
         return request('GET', url)
     },
     post(url, body, options) {
-        return request('POST', url, {...options, body})
+        return request('POST', url, { ...options, body })
     },
     put(url, body, options) {
-        return request('PUT', url, {...options, body})
+        return request('PUT', url, { ...options, body })
     },
     delete(url, body, options) {
-        return request('DELETE', url, {...options, body})
+        return request('DELETE', url, { ...options, body })
     }
 }
 

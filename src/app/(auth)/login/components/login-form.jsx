@@ -32,6 +32,7 @@ const LoginForm = () => {
         })
         localStorage.setItem('authorization', result.data.metadata.tokens.accessToken)
         localStorage.setItem('x-client-id', result.data.metadata.shop._id)
+        
     };
     const handleClick = async () => {
         const data = await fetch('/api/me', {
@@ -45,6 +46,7 @@ const LoginForm = () => {
     }
     return (
         <>
+            <Image></Image>
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col max-w-[500px]"
